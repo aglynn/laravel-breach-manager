@@ -3,9 +3,6 @@
 
 <h1>All Breaches</h1>
 
-<p>{{ link_to_route('breaches.create', 'Add new breach') }}</p>
-
-@if ($breaches->count())
 <table class="table table-striped table-bordered">
     <thead>
     <tr>
@@ -17,7 +14,6 @@
     </thead>
 
     <tbody>
-    @foreach ($breaches as $breach)
     <tr>
         <td>{{ $breach->OrganizationName }}</td>
         <td>{{ $breach->DatesOfBreach }}</td>
@@ -33,13 +29,8 @@
             {{ Form::close() }}
         </td>
     </tr>
-    @endforeach
-
     </tbody>
 
 </table>
-@else
-There are no breaches
-@endif
 
 @stop
