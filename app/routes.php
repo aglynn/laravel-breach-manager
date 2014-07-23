@@ -22,3 +22,5 @@ Route::get('about', function()
 });
 
 Route::get('contact', 'Pages@contact');
+
+Route::resource('breaches', 'BreachController');
